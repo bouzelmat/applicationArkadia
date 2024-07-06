@@ -17,15 +17,27 @@ class MongoDBConnection {
     public function connect() {
         if ($this->client === null) {
             try {
+                $quotaguardUrl = getenv('QUOTAGUARDSTATIC_URL');
+                $proxy = parse_url($quotaguardUrl);
+
                 $options = [
                     'tls' => true,
                     'tlsAllowInvalidCertificates' => true,
                     'retryWrites' => true,
                     'w' => 'majority',
-                    'serverSelectionTimeoutMS' => 5000,
-                    'connectTimeoutMS' => 10000
+                    'serverSelectionTimeoutMS' => 30000,
+                    'connectTimeoutMS' => 30000,
+                    'proxy' => [
+                        'http' => [
+                            'proxy' => "tcp://{$proxy['host']}:{$proxy['port']}",
+                            'auth' => $proxy['user'] . ':' . $proxy['pass']
+                        ]
+                    ]
                 ];
+
                 error_log("Tentative de connexion à MongoDB avec l'URI : " . $this->uri);
+                error_log("Options de connexion : " . json_encode($options));
+
                 $this->client = new Client($this->uri, $options);
                 $this->client->listDatabases();
                 error_log("Connexion à MongoDB réussie");
