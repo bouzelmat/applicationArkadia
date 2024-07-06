@@ -20,7 +20,8 @@
         "ext-mongodb": "*",
         "ext-openssl": "*",
         "phpmailer/phpmailer": "^6.9",
-        "mongodb/mongodb": "^1.15"
+        "mongodb/mongodb": "^1.15",
+        "ext-curl": "*"
     },
     "config": {
         "platform": {
