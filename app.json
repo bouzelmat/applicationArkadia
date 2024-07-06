@@ -1,12 +1,16 @@
 {
     "name": "Arkadia Zoo",
     "description": "Site web pour Arkadia Zoo",
-    "repository": "https://github.com/votre-username/arkadia-zoo",
-    "addons": ["jawsdb", "mongolab"],
+    "repository": "https://github.com/bouzelmat/applicationArkadia.git",
+    "addons": ["jawsdb"],
     "env": {
       "ENVIRONMENT": {
         "description": "Environment for the application (development, production)",
         "value": "production"
+      },
+      "MONGODB_URI": {
+        "description": "MongoDB connection string",
+        "required": true
       }
     },
     "buildpacks": [
