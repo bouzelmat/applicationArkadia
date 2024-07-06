@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "6677c6ce7ec837833a01bac5"
+  },
+  "nom": "Rencontre avec les soigneurs ",
+  "description": "Une session où les visiteurs peuvent rencontrer les soigneurs du zoo, poser des questions et en apprendre d'avantage sur les soins quotidiens des animaux.",
+  "image": "../assets/images/services/soigneurs.png",
+  "date": "2024-06-23"
+},
+{
+  "_id": {
+    "$oid": "6677cd3b7ec837833a01bac6"
+  },
+  "nom": "Spectacle des lions",
+  "description": "un spectacle impressionnant mettant en scène les lions du zoo, permettant aux visiteurs de découvrir leurs comportements et leurs capacités.",
+  "image": "../assets/images/services/spectacle_lion.png",
+  "date": "2024-06-24"
+},
+{
+  "_id": {
+    "$oid": "6677ce2a7ec837833a01bac7"
+  },
+  "nom": "Nourrissage des animaux ",
+  "description": "Des démonstrations de nourrissage où les visiteurs peuvent observer comment les animaux sont nourris et en apprendre davantage sur leur régime alimentaire. ",
+  "image": "../assets/images/services/nourrissage.png",
+  "date": "2024-06-24"
+}]

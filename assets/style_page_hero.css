@@ -1,0 +1,109 @@
+/* tout le style de cette page concerne le Call To Action present sur l'image hero de la page accueil */
+
+.btn_nav {
+    width: 14%;
+}
+
+.page-hero__background{
+    width:100%;
+    height:auto;
+
+}
+
+.bloc_page_hero  {
+    position:absolute;
+    top:27.375rem;
+    width:20rem;
+    height:5rem;
+    z-index:2;
+    transform: rotate(7deg);  
+}
+
+.page-hero__title {
+    font-size: 1.3rem;
+} 
+
+/* media querry */
+
+@media screen and (max-width:1199px){
+    .bloc_page_hero {
+   
+        position:absolute;
+        top:25rem;
+        width:17rem;
+        height:4rem;
+        z-index:2;
+        transform: rotate(7deg);
+        font-size: 1rem;
+    }
+
+    .page-hero__title {
+        font-size: 1.15rem;
+    }
+}
+
+
+@media screen and (max-width:996px) {
+    .bloc_page_hero {
+   
+        position:absolute;
+        top:22rem;
+        width:15rem;
+        height:4rem;
+        z-index:2;
+        transform: rotate(7deg);
+        font-size: 1rem;
+    
+    
+    }
+
+    .page-hero__title {
+        font-size: 1.rem;
+    }
+   
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .bloc_page_hero {
+   
+        position:absolute;
+        top:15rem;
+        width:14rem;
+        height:4rem;
+        z-index:2;
+        transform: rotate(7deg);
+        font-size: 1rem;
+    }
+
+    .page-hero__title {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .bloc_page_hero {
+   
+        position:absolute;
+        top:11rem;
+        width:12rem;
+        height:4rem;
+        z-index:2;
+        transform: rotate(7deg);
+
+    }
+
+    .page-hero__title {
+        font-size: 0.8rem;
+    }
+
+    .btn_page_hero{
+        width:10rem;
+        font-size: 5px;
+        border-radius: 30%;
+
+    }     
+}

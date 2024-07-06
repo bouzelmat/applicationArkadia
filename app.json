@@ -1,0 +1,17 @@
+{
+    "name": "Arkadia Zoo",
+    "description": "Site web pour Arkadia Zoo",
+    "repository": "https://github.com/votre-username/arkadia-zoo",
+    "addons": ["jawsdb", "mongolab"],
+    "env": {
+      "ENVIRONMENT": {
+        "description": "Environment for the application (development, production)",
+        "value": "production"
+      }
+    },
+    "buildpacks": [
+      {
+        "url": "heroku/php"
+      }
+    ]
+  }

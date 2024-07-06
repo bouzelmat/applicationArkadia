@@ -1,0 +1,17 @@
+ /* utilisation des typographies */
+ h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+p {
+    font-family: 'Lora', serif;
+}
+.page-hero__title{
+font-family: 'Manrope', sans-serif !important; 
+}
+
+.nav-hover-effect {
+transition: all 0.3s ease;
+}

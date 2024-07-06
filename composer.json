@@ -1,0 +1,23 @@
+{
+    "name": "ecf/ecf_arkadia",
+    "description": "premier projet",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ecf_arkadia\\Config\\": "config/"
+        }
+    },
+    "authors": [
+        {
+            "name": "bouzelmat",
+            "email": "omarbouzelmat99@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-mysqli": "*",
+        "phpmailer/phpmailer": "^6.9",
+        "mongodb/mongodb": "^1.11"
+    }
+}

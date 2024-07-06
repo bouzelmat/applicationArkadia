@@ -1,0 +1,85 @@
+body {
+    background-color: rgb(222, 247, 215);
+}
+
+.page-hero__background {
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero__background img {
+    width: 100%;
+    height: auto;
+}
+.habitat-info img {
+    width: 100%;
+    height: auto;
+}
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+}
+@media (max-width: 768px) {
+    .w-25 {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 576px) {
+    .btn {
+        width: 100% !important;
+    }
+}
+.habitat-info img {
+    max-width: 100%;
+    height: auto;
+}
+.animal-img-container {
+    width: 100%;
+    padding-top: 75%;
+    position: relative;
+}
+.animal-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* afficher l'image entière */
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .animal-img-container {
+        padding-top: 66.67%;
+    }
+}
+@media (min-width: 992px) {
+    .animal-img-container {
+        padding-top: 95%;
+    }
+}
+.animal-link {
+    display: block;
+    text-decoration: none; /* Enlev les soulignements par défaut */
+}
+
+
+
+.modal-content {   /* cette class concerne la modale qui affiche le rapport veterinaire */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.overlay { /* cette class gère le champ qui propose à l'utilisateur de cliquer sur l'image pour affichez le rapport veterinaire*/
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    width: 90%;
+   
+}

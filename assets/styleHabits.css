@@ -1,0 +1,49 @@
+/* ce fichier n'est pas utilisé dans l'application */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+h1 {
+    margin: 0;
+    text-align: center;
+}
+.habitat-info img, .animal img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.habitat-info h2, .animal h3 {
+    color: #35424a;
+}
+.animal {
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.animal h3, .animal p {
+    margin: 10px 0;
+}
+.animal p {
+    color: #666;
+}
+.animal a {
+    text-decoration: none;
+    color: inherit;
+}
+.animal:hover {
+    background: #e8f4f8;
+}

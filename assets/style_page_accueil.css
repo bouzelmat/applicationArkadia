@@ -1,0 +1,139 @@
+.nav-hover-effect {
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+
+.habitat-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.animal-image {
+    max-width: 400px;
+    height: auto;
+}
+
+.carousel-inner {
+    max-height: 570px;
+}
+
+.carousel-item img {
+    margin: 0 auto;
+}
+
+.carousel-caption {
+    background-color: rgba(152, 206, 203, 0.5); 
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* ajustement des boutons de navigation  */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.photo_etablissement_zoo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.bloc_historyZoo {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .bloc_historyZoo {
+        flex-direction: column;
+    }
+
+    .photo_etablissement_zoo {
+        margin-bottom: 20px;
+    }
+}
+
+/* bloc "preservons la nature" */
+
+.title_ecologie {
+    font-size: 2rem;
+}
+
+.img_ecologie {
+    max-width: 100%;
+    height: auto;
+}
+
+.bloc_txt_habitat {
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.txt_habitat {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+    .title_ecologie {
+        font-size: 1.75rem;
+    }
+
+    .txt_habitat {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title_ecologie {
+        font-size: 1.5rem;
+    }
+
+    .txt_habitat {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .title_ecologie {
+        font-size: 1.25rem;
+    }
+
+    .txt_habitat {
+        font-size: 0.85rem;
+    }
+}
+
+/* style bloc avis */
+
+.card_avis {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item_avis {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-control-prev-icon_avis,
+.carousel-control-next-icon_avis {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+}
