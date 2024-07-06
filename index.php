@@ -14,6 +14,8 @@ if (ENVIRONMENT !== 'production') {
 }
 
 require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/config/Database.php';
+require __DIR__ . '/config/MongoDBConnection.php';
 
 use ecf_arkadia\Config\Database;
 use ecf_arkadia\Config\MongoDBConnection;
