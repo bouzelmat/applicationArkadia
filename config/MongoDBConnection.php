@@ -17,11 +17,21 @@ class MongoDBConnection {
     public function connect() {
         if ($this->client === null) {
             try {
-                $this->client = new Client($this->uri);
+                $options = [
+                    'tls' => true,
+                    'tlsAllowInvalidCertificates' => true,
+                    'retryWrites' => true,
+                    'w' => 'majority',
+                    'serverSelectionTimeoutMS' => 5000,
+                    'connectTimeoutMS' => 10000
+                ];
+                error_log("Tentative de connexion à MongoDB avec l'URI : " . $this->uri);
+                $this->client = new Client($this->uri, $options);
                 $this->client->listDatabases();
+                error_log("Connexion à MongoDB réussie");
             } catch (\Exception $e) {
-                error_log("Erreur de connexion MongoDB : " . $e->getMessage());
-                throw new \Exception("Erreur de connexion à MongoDB");
+                error_log("Erreur de connexion MongoDB détaillée : " . $e->getMessage());
+                throw new \Exception("Erreur de connexion à MongoDB: " . $e->getMessage());
             }
         }
         return $this->client;
