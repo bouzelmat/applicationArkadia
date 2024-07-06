@@ -1,9 +1,9 @@
 <?php
-$url = parse_url(getenv("JAWSDB_URL"));
+$url = parse_url(getenv("JAWSDB_URL") ?: '');
 return [
-    'db_host' => $url["host"],
-    'db_port' => $url["port"],
-    'db_name' => ltrim($url["path"], "/"),
-    'db_username' => $url["user"],
-    'db_password' => $url["pass"],
+    'db_host' => $url["host"] ?? null,
+    'db_port' => $url["port"] ?? null,
+    'db_name' => isset($url["path"]) ? ltrim($url["path"], "/") : null,
+    'db_username' => $url["user"] ?? null,
+    'db_password' => $url["pass"] ?? null,
 ];

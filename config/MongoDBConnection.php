@@ -8,8 +8,10 @@ class MongoDBConnection {
     private $client;
 
     public function __construct() {
-        // utilise l'URI de Heroku si disponible, sinon elle utilise la configuration locale
         $this->uri = getenv('MONGODB_URI') ?: (require __DIR__ . '/mongo_config.php')['mongo_uri'];
+        if (!$this->uri) {
+            throw new \Exception("L'URI MongoDB n'est pas définie");
+        }
     }
 
     public function connect() {

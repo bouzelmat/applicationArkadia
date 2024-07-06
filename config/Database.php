@@ -12,11 +12,11 @@ class Database {
     public function __construct() {
         if (getenv('JAWSDB_URL')) {
             $url = parse_url(getenv('JAWSDB_URL'));
-            $this->host = $url['host'];
-            $this->port = $url['port'];
-            $this->db_name = ltrim($url['path'], '/');
-            $this->username = $url['user'];
-            $this->password = $url['pass'];
+            $this->host = $url['host'] ?? null;
+            $this->port = $url['port'] ?? null;
+            $this->db_name = isset($url['path']) ? ltrim($url['path'], '/') : null;
+            $this->username = $url['user'] ?? null;
+            $this->password = $url['pass'] ?? null;
         } else {
             $config = require __DIR__ . '/config.php';
             $this->host = $config['db_host'];
@@ -25,8 +25,11 @@ class Database {
             $this->username = $config['db_username'];
             $this->password = $config['db_password'];
         }
+    
+        if (!$this->host || !$this->username || !$this->password || !$this->db_name) {
+            throw new \Exception("Configuration de base de données incomplète");
+        }
     }
-
     public function getConnection() {
         $this->conn = null;
 
