@@ -1,9 +1,9 @@
 <?php
 // définition de l'environnement
-define('ENVIRONMENT', getenv('ENVIRONMENT') ?: 'development');
+define('ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
 
 // configuration de l'affichage des erreurs
-if (ENVIRONMENT !== 'production') {
+if (ENVIRONMENT === 'development') {
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
@@ -14,8 +14,6 @@ if (ENVIRONMENT !== 'production') {
 }
 
 require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/config/Database.php';
-require __DIR__ . '/config/MongoDBConnection.php';
 
 use ecf_arkadia\Config\Database;
 use ecf_arkadia\Config\MongoDBConnection;
@@ -27,17 +25,17 @@ try {
     $mongoDb = new MongoDBConnection();
     $connMongo = $mongoDb->connect();
 
-    // initialisation des objets globaux
+    // Initialisation des objets globaux
     $app = new \stdClass();
     $app->db = $connRelational;
     $app->mongo = $connMongo;
 
-    // redirection vers la page d'accueil
-    header('Location: /views/zoo_arkadia_accueil.php');
-    exit();
+    
+    include __DIR__ . '/views/zoo_arkadia_accueil.php';
 
 } catch (\Exception $e) {
-    echo "Erreur : " . $e->getMessage();
+    error_log("Erreur : " . $e->getMessage());
+    echo "Une erreur est survenue. Veuillez réessayer plus tard.";
     exit(1);
 }
 
