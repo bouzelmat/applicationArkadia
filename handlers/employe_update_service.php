@@ -7,8 +7,8 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'employe') {
 }
 
 require_once '../config/Database.php';
-require_once '../models/class_Employe.php';
-require_once '../models/class_Service.php';
+require_once '../models/class_employe.php';
+require_once '../models/class_service.php';
 
 $database = new \ecf_arkadia\config\Database();
 $conn = $database->getConnection();
