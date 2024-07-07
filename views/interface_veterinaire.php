@@ -5,7 +5,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'veterinaire') {
     header('Location: access_denied.php');
     exit();
 }
-include '../handlers/Rapport_veterinaire_data.php';
+include '../handlers/rapport_veterinaire_data.php';
 include 'header.php';
 ?>
 
