@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../assets/style_page_hero.css" rel="stylesheet">
     <link href="../assets/style_habitats_animaux.css" rel="stylesheet">
-    <link href="/ecf_arkadia/assets/typography.css" rel="stylesheet">
-    <link href="/ecf_arkadia/assets/menuNavigation.css" rel="stylesheet">
+    <link href="../assets/typography.css" rel="stylesheet">
+    <link href="../assets/menuNavigation.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@
     </header>
 
     <div class="page-hero__background py-4">
-        <img src="../assets/images/hero/singe.png" class="img_page_accueil img-fluid" alt="photo d'un lion">
+        <img src="../assets/images/hero/singe.png" class="img_page_accueil img-fluid" alt="photo d'un singe">
     </div>
 
     <div class="container">
