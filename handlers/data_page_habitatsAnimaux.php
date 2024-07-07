@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // ce fichier recupere les données des habitas et des animaux et les rapports véterinaires depuis la bdd. concernant l'affichage des données : le fichier scriptHabitats.js va traiter l'affichage sur la pahe habitats et animaux
 require_once '../config/Database.php'; 
 require_once '../models/class_Habitat.php';
