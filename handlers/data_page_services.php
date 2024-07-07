@@ -1,7 +1,7 @@
 <?php
 // ce fichier récupère les données de la bdd, ensuite ces données sont traitées par le fichier services.js pour effectuer l'affichage sur la page service.
 require_once '../config/Database.php';
-require_once __DIR__ . '/../models/class_Service.php';
+require_once '../models/class_service.php';
 
 $database = new \ecf_arkadia\Config\Database();
 $db = $database->getConnection();
