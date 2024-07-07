@@ -13,8 +13,8 @@ require_once '../models/class_role.php';
 require_once '../models/class_admin.php';
 require_once '../models/class_rapportVeterinaire.php';
 require_once '../models/class_animal.php';
-require_once '../models/class_Service.php';
-require_once '../models/class_Habitat.php';
+require_once '../models/class_service.php';
+require_once '../models/class_habitat.php';
 require_once '../vendor/autoload.php';
 require_once '../config/MongoDBConnection.php';
 
